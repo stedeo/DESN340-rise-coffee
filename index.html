@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head><!-- The head is a container for information ABOUT the page.
+           Nothing in here appears on the page. The browser reads it, the visitor never sees it. -->
+
+	<!-- Which character set to use. Leave this out and apostrophes turn into garbage. -->
+	<meta charset="utf-8">
+	<!-- Tells a phone to use its real width instead of pretending to be a desktop. -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The browser tab text, and what Google shows in search results. Not a heading on the page. -->
+	<title>Rise Coffee</title>
+
+	<!-- STYLES -->
+	<!-- STEP 1: your two stylesheet links go here -->
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="layout.css">
+	<link rel="stylesheet" href="style.css">
+	
+
+	<!-- FONTS -->
+	<!-- STEP 2: your Google Fonts links go here -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+
+<body><!-- The body holds everything the visitor actually SEES. -->
+
+	<!-- HEADER: the strip along the top. It is the same on every page of the site,
+	     which is why it lives outside <main>. -->
+	<header>
+		<!-- LOGO -->
+		<a href="index.html"><img src="images/rise-logo.svg" style="width:120px;" alt="rise logo"></a>
+
+		<!-- NAVIGATION: a menu is a LIST of related links, so it is marked up as a ul with li inside.
+		     CSS takes the bullets off later, but underneath it stays a list, because that is what it is. -->
+		<nav>
+			<ul>
+				<li><a class="nav-link" href="index.html">Home</a></li>
+				<li><a class="nav-link" href="about.html">About</a></li>
+				<li><a class="nav-link" href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- The # in this href jumps to the element with id="visit" further down THIS page,
+		     instead of opening a different page. -->
+		<a href="#visit">Visit Us</a>
+	</header>
+
+	<!-- MAIN: everything between the header and the footer. This is the part that is
+	     actually THIS page. One <main> per page. -->
+	<main>
+
+		<!-- SECTION: one horizontal band of the page. Look at the mockup: every time the
+		     background colour changes, a new section starts. This page has five. -->
+
+		<!-- HERO SECTION: the first thing a visitor sees. -->
+		<section>
+
+			<!-- DIV: a plain box with no meaning. It exists so we can group things together
+			     and move them around with CSS later. You will use hundreds of these. -->
+			<div>
+				<!-- h1 is the most important heading on the page. Only ever one per page. -->
+				<h1>the lift you’ve been looking for</h1>
+			</div>
+
+			<div>
+				<!-- img has no closing tag. An image is a thing, not a container,
+				     so there is nothing to wrap around and nothing to close.
+				     Every image also needs an alt attribute describing what it shows. -->
+				<img src="images/rise-coffee-1.jpg" style="width: 100%" alt="rise coffee 1">
+			</div>
+
+		</section>
+
+
+		<!-- FAVOURITE CUP SECTION: gold band in the mockup.
+		     Notice the markup is identical to the section above. Only the CSS will differ. -->
+		<section class="background-gold">
+
+			<div>
+				<p class="paragraph-large">We believe coffee is more than a drink — it’s a ritual. Come discover your new favorite cup.</p>
+			</div>
+			<a href="#visit">Visit Us</a>
+
+		</section>
+
+
+		<!-- KNOWN FOR SECTION: the three cards.
+		     Look at columns 1, 2 and 3 below. They are the SAME block written three times
+		     with different words. Write one, get it right, then copy it. -->
+		<section>
+			
+			<!-- ROW -->
+			<div>
+				<h2>what we’re known for</h2>
+			</div>
+
+
+			<!-- ROW -->
+			<div>
+				<!-- COLUMN 1-->
+				<div>
+					<img src="images/rise-coffee-4.jpg" style="width: 33%" alt="rise coffee 4">
+					<h2>small-batch roasts</h2>
+					<p>We source our beans from sustainable farms and roast them fresh in-house.</p>
+				</div>
+
+				<!-- COLUMN 2 -->
+				<div>
+					<img src="images/rise-coffee-5.jpg" style="width: 33%" alt="rise coffee 5">
+					<h2>fresh pastries</h2>
+					<p>Pair your coffee with handmade croissants, muffins, and more.</p>
+				</div>
+
+				<!-- COLUMN 3 -->
+				<div>
+					<img src="images/rise-coffee-2.jpg" style="width: 33%" alt="rise coffee 2">
+					<h2>homey vibes</h2>
+					<p>Whether you’re studying, catching up, or just relaxing, our space is your space.</p>
+				</div>
+			</div>
+
+		</section>
+
+
+		<!-- VISIT US SECTION. The id="visit" is what the Visit Us buttons jump to.
+		     An id can only be used once per page. A class can be used as often as you like. -->
+		<section id="visit" class="background-gold">
+			
+			<!-- ROW -->
+			<div>
+				
+				<div>
+					<h2>visit us</h2>
+
+					<div>
+						<h3>location</h3>
+						<p>304 Main St<br>Wellington, ON  K0K 3L0</p>
+					</div>
+
+					<div>
+						<!-- Opening hours are a list of related items, so: another ul.
+						     Same two tags as the navigation, doing a completely different job. -->
+						<h3>hours</h3>
+						 <ul>
+						    <li>Monday: <strong>7am – 5pm</strong></li>
+						    <li>Tuesday: <strong>7am – 5pm</strong></li>
+						    <li>Wednesday: <strong>7am – 5pm</strong></li>
+						    <li>Thursday: <strong>7am – 7pm</strong></li>
+						    <li>Friday: <strong>7am – 5pm</strong></li>
+						    <li>Saturday: <strong>9am – 5pm</strong></li>
+						    <li>Sunday: <strong>9am – 3pm</strong></li>
+  						</ul>
+						<a class="maroon-button">Get In Touch</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div>
+				<img src="images/map.png" style="width:100%" alt="map">
+			</div>
+
+		</section>
+
+
+		<!-- TESTIMONIALS SECTION: maroon band in the mockup. -->
+		<section class="background-maroon-light">
+			
+			<div>
+				<img src="images/rise-icon-2.svg" style="width: 100px" alt="rise icon 2">
+				<h2>what our regulars are saying...</h2>
+				<p class="quote-text">“The best latte I’ve had in the city. Period.”</p>
+				<p class="quote-author">— Sarah J.</p>
+			</div>
+
+		</section>
+
+	</main>
+
+
+	 <!-- FOOTER -->
+	<footer class="footer">
+		<div>
+			<div>
+				<a href="index.html"><img src="images/rise-logo.svg" style="width:120px;"></a>
+				<p>© 2025 Rise Coffee</p>
+				<a href="#">Privacy Policy</a>
+				<a href="#">Terms</a>
+			</div>
+
+			<div>
+				<h3>Get in Touch</h3>
+				<p>780-939-5224</p>
+				<p>hello@risecoffee.com</p>
+				<p>304 Main St<br>Wellington, ON  K0K 3L0</p>
+			</div>
+
+			<div>
+				<h3>Hours</h3>
+				<ul>
+					<li>Monday: <strong>7am – 5pm</strong></li>
+					<li>Tuesday: <strong>7am – 5pm</strong></li>
+					<li>Wednesday: <strong>7am – 5pm</strong></li>
+					<li>Thursday: <strong>7am – 7pm</strong></li>
+					<li>Friday: <strong>7am – 5pm</strong></li>
+					<li>Saturday: <strong>9am – 5pm</strong></li>
+					<li>Sunday: <strong>9am – 3pm</strong></li>
+  				</ul>
+			</div>
+
+		</div>
+
+	</footer>
+
+</body>
+</html>

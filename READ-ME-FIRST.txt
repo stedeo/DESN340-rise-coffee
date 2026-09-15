@@ -1,0 +1,36 @@
+DESN 340  ·  Class 2 starting point
+Rise Coffee home page
+
+WHAT IS IN HERE
+
+  index.html      The complete home page markup. Nothing is missing.
+  normalize.css   Somebody else wrote this. Link it, never edit it.
+  images/         All the photographs, the logo and the icons.
+
+WHAT IS NOT IN HERE
+
+  style.css       You create this in class. It does not exist yet.
+
+WHY YOU HAVE THIS FILE
+
+  Everyone starts Class 2 from the same place. It does not matter how far
+  you got last week. Download this, work in this folder from now on, and
+  keep it. You will add to it every week for the rest of the term.
+
+FIRST THINGS TO DO
+
+  1. Unzip this folder somewhere you will find it again.
+     Not in Downloads. Not on the Desktop with forty other things.
+
+  2. Open index.html in your browser. It will look plain and ugly.
+     That is correct. There is no CSS yet.
+
+  3. Open index.html in Sublime Text and scroll through it.
+     Look for the two comments near the top that say STEP 1 and STEP 2.
+     That is where your stylesheet links go in class.
+
+FILE NAMING, FROM NOW ON
+
+  All lowercase. No spaces. Hyphens instead of spaces.
+  This works on your laptop AND on a real web server. Capital letters
+  and spaces do not.

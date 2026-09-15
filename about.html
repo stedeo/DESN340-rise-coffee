@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head><!-- The head is a container for information ABOUT the page.
+           Nothing in here appears on the page. The browser reads it, the visitor never sees it. -->
+
+	<!-- Which character set to use. Leave this out and apostrophes turn into garbage. -->
+	<meta charset="utf-8">
+	<!-- Tells a phone to use its real width instead of pretending to be a desktop. -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The browser tab text, and what Google shows in search results. Not a heading on the page. -->
+	<title>Rise Coffee - About</title>
+
+	<!-- STYLES -->
+	<!-- STEP 1: your two stylesheet links go here -->
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="layout.css">
+	<link rel="stylesheet" href="style.css">
+	
+
+	<!-- FONTS -->
+	<!-- STEP 2: your Google Fonts links go here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body><!-- The body holds everything the visitor actually SEES. -->
+
+	<!-- HEADER: the strip along the top. It is the same on every page of the site,
+	     which is why it lives outside <main>. -->
+	<header>
+		<!-- LOGO -->
+		<a href="index.html"><img src="images/rise-logo.svg" style="width:120px;"></a>
+
+		<!-- NAVIGATION: a menu is a LIST of related links, so it is marked up as a ul with li inside.
+		     CSS takes the bullets off later, but underneath it stays a list, because that is what it is. -->
+		<nav>
+			<ul>
+				<li><a class="nav-link" href="index.html">Home</a></li>
+				<li><a class="nav-link" href="about.html">About</a></li>
+				<li><a class="nav-link" href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- The # in this href jumps to the element with id="visit" further down THIS page,
+		     instead of opening a different page. -->
+            <a class="visit-button" href="#visit">Visit Us</a>
+	</header>
+
+    <main>
+        <!--ABOUT-->
+        <section>
+            <div>
+                <h1>about us</h1>
+            </div>
+            <div>
+                <img src="images/rise-coffee-2.jpg"  style="width: 90%; height:698px" alt="rise coffee 2">
+                <img src="images/rise-icon-1.svg" alt="rise icon 1">
+            </div>
+        </section>
+        <!-- OUR STORY-->
+        <section class="background-gold">
+            <div>
+                <h2>our story</h2>
+                <p>Rise Coffee began as a pop-up espresso cart in 2016, run by Jenny & Mark who believed mornings deserved better. What started with a borrowed machine and a handful of regulars has grown into a community hub where great coffee meets genuine connection. We’ve stayed true to our roots: small-batch roasting, a love for craft, and a commitment to keeping coffee approachable.</p>
+            </div>
+        </section>
+        <!--OUR VALUES-->
+        <section>
+            <div>
+                <h2>our values</h2>
+            </div>
+            <div>
+                <img src="images/community.svg" alt="community icon">
+                <h3>community first</h3>
+                <p>Coffee is more than a drink; it’s a way to bring people together.</p>
+                <div class="horizontal-line"></div><!-- This line will adust when the layout is properly done-->
+            </div>
+             <div>
+                <img src="images/care.svg" alt="care icon">
+                <h3>care over pretension</h3>
+                <p>We source responsibly and roast with care, but keep the vibe laid-back and welcoming.</p>
+                <div class="horizontal-line"></div>
+            </div>
+             <div>
+                <img src="images/sustainability.svg" alt="sustainability icon">
+                <h3>sustainability always</h3>
+                <p>From cups to direct-trade partnerships, we believe every choice matters.</p>
+                <div class="horizontal-line"></div>
+            </div>
+        </section>
+        <!--EVENTS-->
+        <section>
+            <div>
+                <img src="images/rise-coffee-8.jpg" alt="">
+                <h2>events at rise</h2>
+                <p>Looking for a space with good energy (and even better coffee)? Our café is available for community gatherings, art shows, live music, workshops, and private events. Whether you’re planning an intimate reading or a lively launch party, we’ve got the space — and, of course, the coffee.</p>
+                <a class="maroon-button" href>Inquire Now</a>
+            </div>
+        </section>
+        <!--MORE THAN A CAFE-->
+        <section class="background-gold">
+            <div>
+                <h2>more than a cafe</h2>
+                <p>We’re proud to support local artists, host open mic nights, and partner with neighborhood nonprofits. When you visit Rise Coffee, you’re not just grabbing a latte — you’re plugging into a space that celebrates creativity, connection, and community.</p>
+            </div>
+        </section>
+        <!--QUOTES-->
+        <section class="background-maroon-light">
+            <div>
+                <img src="images/rise-icon-2.svg" alt="rise icon 2">
+                <h2>what our regulars are saying...</h2>
+                <h4 class="quote-text">“Perfect spot for studying. Great coffee and even better vibes”</h4>
+                <h4 class="quote-author">— Miguel R.</h4>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+	<footer class="footer">
+		<div>
+			<div>
+				<a href="index.html"><img src="images/rise-logo.svg" style="width:120px;"></a>
+				<p>© 2025 Rise Coffee</p>
+				<a href="#">Privacy Policy</a>
+				<a href="#">Terms</a>
+			</div>
+
+			<div>
+				<h3>Get in Touch</h3>
+				<p>780-939-5224</p>
+				<p>hello@risecoffee.com</p>
+				<p>304 Main St<br>Wellington, ON  K0K 3L0</p>
+			</div>
+
+			<div>
+				<h3>Hours</h3>
+				<ul>
+					<li>Monday: <strong>7am – 5pm</strong></li>
+					<li>Tuesday: <strong>7am – 5pm</strong></li>
+					<li>Wednesday: <strong>7am – 5pm</strong></li>
+					<li>Thursday: <strong>7am – 7pm</strong></li>
+					<li>Friday: <strong>7am – 5pm</strong></li>
+					<li>Saturday: <strong>9am – 5pm</strong></li>
+					<li>Sunday: <strong>9am – 3pm</strong></li>
+  				</ul>
+			</div>
+
+		</div>
+
+	</footer>
+
+</body>
+</html>
