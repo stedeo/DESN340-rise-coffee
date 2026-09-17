@@ -4,13 +4,13 @@ html { box-sizing:border-box;}
 
 body { font-family: "Space Grotesk", sans-serif; background-color:#FFF4E2} 
 
-header { background-color: #873A47;}
-section { padding:86px 84px;}
+header { background-color: #873A47;
+    padding:16px 6%;}
 
 /* BACKGROUND */
 .background-gold{background-color: #D2A751;}
-.background-maroon-light{background-color: #873A47; color:white; text-align: center;}
-.background-maroon-dark{background-color: #4A0E30; color: white}
+.background-maroon-light{background-color: #873A47;}
+.background-maroon-dark{background-color: #4A0E30;}
 
 /* FONTS */
 h1{
@@ -39,7 +39,6 @@ p {
     line-height: 140%; 
     font-weight: 400; 
     color:#53444B;
-    font-style:italic;
 }
 .quote-text {
     font-size:32px;
@@ -58,7 +57,11 @@ p {
 
 /* NAVIGATION */
 nav, li { list-style:none; padding-left:0; } /* this is targeting the list items in navigation*/
-
+nav ul {
+    display:flex;
+    justify-content: center;
+    gap:16px;
+}
 .nav-link { color:#ffffff; text-decoration: none; }
 
 .paragraph-large { 
