@@ -11,21 +11,16 @@
 	<!-- The browser tab text, and what Google shows in search results. Not a heading on the page. -->
 	<title>Rise Coffee</title>
 
-	<!-- STYLES -->
-	<!-- STEP 1: your two stylesheet links go here -->
-	<link rel="stylesheet" href="normalize.css">
-	<link rel="stylesheet" href="layout.css">
-	<link rel="stylesheet" href="style.css">
-
+	<!-- STYLES: normalize first, then layout, then style.
+	     General to specific. When two rules clash, the later one wins. -->
+	<link rel="stylesheet" href="normalize.css"> <!-- Irons out browser default settings. -->
+	<link rel="stylesheet" href="layout.css"> <!-- This controls our structure and layout. -->
+	<link rel="stylesheet" href="style.css"> <!-- This is where we style the elements of the page. -->
 
 	<!-- FONTS -->
-	<!-- STEP 2: your Google Fonts links go here -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-
-
-
 
 </head>
 
@@ -34,81 +29,105 @@
 	<!-- HEADER: the strip along the top. It is the same on every page of the site,
 	     which is why it lives outside <main>. -->
 	<header>
-		<!-- LOGO -->
-		<a href="index.html"><img src="images/rise-logo.svg" style="width:120px;" alt="rise logo"></a>
+        <!-- LOGO -->
+        <div class="row row-justify-center row-align-center">
+            <div class="col col-lg-1">
+                <a href="index.html"><img src="images/rise-logo.svg" style="width:120px;"></a>
+            </div>
 
-		<!-- NAVIGATION: a menu is a LIST of related links, so it is marked up as a ul with li inside.
+            <!-- NAVIGATION: a menu is a LIST of related links, so it is marked up as a ul with li inside.
 		     CSS takes the bullets off later, but underneath it stays a list, because that is what it is. -->
-		<nav>
-			<ul>
-				<li><a class="nav-link" href="index.html">Home</a></li>
-				<li><a class="nav-link" href="about.html">About</a></li>
-				<li><a class="nav-link" href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
+            <div class="col col-lg-12">
+                <nav>
+                    <ul>
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="about.html">About</a></li>
+                        <li><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-		<!-- The # in this href jumps to the element with id="visit" further down THIS page,
+            <!-- The # in this href jumps to the element with id="visit" further down THIS page,
 		     instead of opening a different page. -->
-		<a class="visit-button" href="#visit">Visit Us</a>
-	</header>
+            <div class="col col-lg-1">
+                <a class="visit-button" href="#visit">Visit Us</a>
+            </div>
+        </div>
+    </header>
 
 	<!-- MAIN: everything between the header and the footer. This is the part that is
 	     actually THIS page. One <main> per page. -->
 	<main>
 
-		<!-- SECTION: one horizontal band of the page. Look at the mockup: every time the
-		     background colour changes, a new section starts. This page has five. -->
+		<!-- SECTION: one horizontal band of the page. Look at the mockup: every time the background colour changes, a new section starts. This page has five.
 
-		<!-- HERO SECTION: the first thing a visitor sees. -->
+		     From here on, every section has the same four levels:
+		         section  →  container  →  row  →  col
+		     The section is the band. The container holds the width. The row makes its
+		     children sit side by side. The columns are the things sitting side by side. -->
+
+		<!-- HERO SECTION: the first thing a visitor sees.
+		     One wide column, centred. 8 out of 12, pushed to the middle by row-justify-center. -->
 		<section class="section-padding">
+			<div class="container">
 
-			<!-- DIV: a plain box with no meaning. It exists so we can group things together
-			     and move them around with CSS later. You will use hundreds of these. -->
-			<div>
-				<!-- h1 is the most important heading on the page. Only ever one per page. -->
-				<h1>the lift you’ve been looking for</h1>
-			</div>
-			<div>
-				<!-- img has no closing tag. An image is a thing, not a container,
-				     so there is nothing to wrap around and nothing to close.
-				     Every image also needs an alt attribute describing what it shows. -->
-				<img src="images/rise-coffee-1.jpg" class="img-full" alt="rise coffee 1">
-			</div>
+				<div class="row row-justify-center">
+					<!-- DIV: a plain box with no meaning. The class is what gives it a job. -->
+					<div class="col col-lg-8 text-center">
+						<!-- h1 is the most important heading on the page. Only ever one per page. -->
+						<h1>the lift you’ve been looking for</h1>
+					</div>
+				</div><!-- row ends -->
 
+				<div class="row">
+					<div class="col col-lg-12">
+						<!-- img has no closing tag. An image is a thing, not a container, so there is nothing to wrap around and nothing to close.						     img-full makes it fill its column. Every image needs alt text. -->
+						<img src="images/rise-coffee-1.jpg" class="img-full" alt="Coffee and pastries on a table">
+					</div>
+				</div><!-- row ends -->
+
+			</div><!-- container ends -->
 		</section>
 
 
 		<!-- FAVOURITE CUP SECTION: gold band in the mockup.
-		     Notice the markup is identical to the section above. Only the CSS will differ. -->
-		<section class="background-gold section-padding">
+		     Same shape as the hero. One wide centred column, this time 10 of 12. -->
+		<section class="section-padding background-gold">
+			<div class="container">
 
-			<div>
-				<p class="paragraph-large">We believe coffee is more than a drink — it’s a ritual. Come discover your
-					new favorite cup.</p>
-			</div>
-			<a href="#visit">Visit Us</a>
+				<div class="row row-justify-center">
+					<div class="col col-lg-10 text-center">
+						<p class="paragraph-large">We believe coffee is more than a drink, it’s a ritual. Come discover
+							your new favorite cup.</p>
+						<a href="#visit" class="maroon-button">Visit Us</a>
+					</div>
+				</div><!-- row ends -->
 
+			</div><!-- container ends -->
 		</section>
 
 
 		<!-- KNOWN FOR SECTION: the three cards.
-		     Look at columns 1, 2 and 3 below. They are the SAME block written three times
-		     with different words. Write one, get it right, then copy it. -->
+		     Look at columns 1, 2 and 3 below. They are the SAME block written three times with different words. Write one, get it right, then copy it.
+
+		     Two rows here: a full-width heading, then three equal columns.
+		     Three columns of 4 add up to 12. They always add up to 12. -->
 		<section class="section-padding">
 			<div class="container">
+
 				<!-- ROW -->
 				<div class="row">
 					<div class="col col-lg-12">
 						<h2 class="text-center">what we’re known for</h2>
 					</div>
-				</div>
-
+				</div><!-- row ends -->
 
 				<!-- ROW -->
 				<div class="row">
-					<!-- COLUMN 1-->
+
+					<!-- COLUMN 1 -->
 					<div class="col col-lg-4">
-						<img src="images/rise-coffee-4.jpg" class="img-full" alt="rise coffee 4">
+						<img src="images/rise-coffee-4.jpg" class="img-full" alt="Roasted coffee beans">
 						<div class="horizontal-line"></div>
 						<h2>small-batch roasts</h2>
 						<p>We source our beans from sustainable farms and roast them fresh in-house.</p>
@@ -117,7 +136,7 @@
 
 					<!-- COLUMN 2 -->
 					<div class="col col-lg-4">
-						<img src="images/rise-coffee-5.jpg" class="img-full" alt="rise coffee 5">
+						<img src="images/rise-coffee-5.jpg" class="img-full" alt="A tray of fresh pastries">
 						<div class="horizontal-line"></div>
 						<h2>fresh pastries</h2>
 						<p>Pair your coffee with handmade croissants, muffins, and more.</p>
@@ -126,102 +145,129 @@
 
 					<!-- COLUMN 3 -->
 					<div class="col col-lg-4">
-						<img src="images/rise-coffee-2.jpg" class="img-full" alt="rise coffee 2">
+						<img src="images/rise-coffee-2.jpg" class="img-full" alt="The cafe seating area">
 						<div class="horizontal-line"></div>
 						<h2>homey vibes</h2>
 						<p>Whether you’re studying, catching up, or just relaxing, our space is your space.</p>
 						<div class="horizontal-line"></div>
 					</div>
-				</div>
-			</div>
+
+				</div><!-- row ends -->
+
+			</div><!-- container ends -->
 		</section>
 
 
 		<!-- VISIT US SECTION. The id="visit" is what the Visit Us buttons jump to.
-		     An id can only be used once per page. A class can be used as often as you like. -->
-		<section id="visit" class="background-gold section-padding">
+		     An id can only be used once per page. A class can be used as often as you like.
+
+		     Two UNEQUAL columns this time: 5 and 7. Still adds up to 12.
+		     row-align-center lines them up vertically in the middle of each other. -->
+		<section id="visit" class="section-padding background-gold">
 			<div class="container">
+
 				<!-- ROW -->
-				<div class="row">
-					<div class="col col-lg-4">
+				<div class="row row-align-center">
+
+					<!-- COLUMN 1: the details -->
+					<div class="col col-lg-5">
 						<h2>visit us</h2>
-						<div>
-							<h3>location</h3>
-							<p>304 Main St<br>Wellington, ON K0K 3L0</p>
-						</div>
-						<div>
-							<!-- Opening hours are a list of related items, so: another ul.
+
+						<h3>location</h3>
+						<p>304 Main St<br>Wellington, ON K0K 3L0</p>
+
+						<!-- Opening hours are a list of related items, so: another ul.
 						     Same two tags as the navigation, doing a completely different job. -->
-							<h3>hours</h3>
-							<ul>
-								<li>Monday: <strong>7am – 5pm</strong></li>
-								<li>Tuesday: <strong>7am – 5pm</strong></li>
-								<li>Wednesday: <strong>7am – 5pm</strong></li>
-								<li>Thursday: <strong>7am – 7pm</strong></li>
-								<li>Friday: <strong>7am – 5pm</strong></li>
-								<li>Saturday: <strong>9am – 5pm</strong></li>
-								<li>Sunday: <strong>9am – 3pm</strong></li>
-							</ul>
-							<a class="maroon-button">Get In Touch</a>
-						</div>
-					</div>
-					<div class="col col-lg-8">
-						<img src="images/map.png" class="img-full" alt="map">
-					</div>
-				</div>
-			</div>
+						<h3>hours</h3>
+						<ul>
+							<li>Monday: <strong>7am – 5pm</strong></li>
+							<li>Tuesday: <strong></strong>7am – 5pm</strong></li>
+							<li>Wednesday: <strong>7am – 5pm</strong></li>
+							<li>Thursday: <strong>7am – 7pm</strong></li>
+							<li>Friday: <strong>7am – 5pm</strong></li>
+							<li>Saturday: <strong>9am – 5pm</strong></li>
+							<li>Sunday: 9am – 3pm</li>
+						</ul>
 
+						<a href="#vistit" class="maroon-button">Get in Touch</a>
+					</div>
 
+					<!-- COLUMN 2: the map -->
+					<div class="col col-lg-7">
+						<img src="images/map.png" class="img-full" alt="Map showing the location of Rise Coffee">
+					</div>
+
+				</div><!-- row ends -->
+
+			</div><!-- container ends -->
 		</section>
 
 
-		<!-- TESTIMONIALS SECTION: maroon band in the mockup. -->
-		<section class="background-maroon-light section-padding">
+		<!-- TESTIMONIALS SECTION: maroon band in the mockup.
+		     text-white goes on EACH element that needs it, not on the section.
+		     A colour inherited from a parent loses to a rule that targets the element directly, and h2 already has a colour of its own. -->
+		<section class="section-padding background-maroon-light">
+			<div class="container">
 
-			<div>
-				<img src="images/rise-icon-2.svg" style="width: 100px" alt="rise icon 2">
-				<h2>what our regulars are saying...</h2>
-				<h4 class="quote-text">“The best latte I’ve had in the city. Period.”</p>
-				<h4 class="quote-author">— Sarah J.</p>
-			</div>
+				<!-- ROW -->
+				<div class="row row-justify-center">
+					<div class="col col-lg-8 text-center">
+						<!-- Decorative image, so alt is empty. A screen reader skips it. -->
+						<img src="images/rise-icon-2.svg" style="width: 100px" alt="">
+						<h2 class="text-white">what our regulars are saying...</h2>
+						<p class="text-white quote-text">“The best latte I’ve had in the city. Period.”</p>
+						<p class="text-white quote-author">— Sarah J.</p>
+					</div>
+				</div><!-- row ends -->
 
+			</div><!-- container ends -->
 		</section>
 
 	</main>
 
 
-	<!-- FOOTER -->
-	<footer class="footer section-padding">
-		<div class="row">
-			<div class="col">
-				<a href="index.html"><img src="images/rise-logo.svg" style="width:120px;"></a>
-				<p>© 2025 Rise Coffee</p>
-				<a href="#">Privacy Policy</a>
-				<a href="#">Terms</a>
-			</div>
+	<!-- FOOTER: three equal columns. Same shape as the known for section,
+	     4 + 4 + 4 = 12. The footer sits outside <main> because it repeats
+	     on every page, exactly like the header. -->
+	<footer class="section-padding background-maroon">
+		<div class="container">
 
-			<div class="col">
-				<h3>Get in Touch</h3>
-				<p>780-939-5224</p>
-				<p>hello@risecoffee.com</p>
-				<p>304 Main St<br>Wellington, ON K0K 3L0</p>
-			</div>
+			<!-- ROW -->
+			<div class="row">
 
-			<div class="col">
-				<h3>Hours</h3>
-				<ul>
-					<li>Monday: <strong>7am – 5pm</strong></li>
-					<li>Tuesday: <strong>7am – 5pm</strong></li>
-					<li>Wednesday: <strong>7am – 5pm</strong></li>
-					<li>Thursday: <strong>7am – 7pm</strong></li>
-					<li>Friday: <strong>7am – 5pm</strong></li>
-					<li>Saturday: <strong>9am – 5pm</strong></li>
-					<li>Sunday: <strong>9am – 3pm</strong></li>
-				</ul>
-			</div>
+				<!-- COLUMN 1 -->
+				<div class="col col-lg-4">
+					<a href="index.html"><img src="images/rise-logo.svg" style="width:120px;" alt="rise logo"></a>
+					<p class="text-white">© 2026 Rise Coffee</p>
+					<a href="#" class="nav-link">Privacy Policy</a>
+					<a href="#" class="nav-link">Terms</a>
+				</div>
 
-		</div>
+				<!-- COLUMN 2 -->
+				<div class="col col-lg-4">
+					<h2 class="text-white">Get in Touch</h2>
+					<p class="text-white">780-939-5224</p>
+					<p class="text-white">hello@risecoffee.com</p>
+					<p class="text-white">304 Main St<br>Wellington, ON K0K 3L0</p>
+				</div>
 
+				<!-- COLUMN 3 -->
+				<div class="col col-lg-4">
+					<h2 class="text-white">Hours</h2>
+					<ul>
+						<li class="text-white">Monday: <strong>7am – 5pm</strong></li>
+						<li class="text-white">Tuesday: <strong>7am – 5pm</strong></li>
+						<li class="text-white">Wednesday: <strong>7am – 5pm</strong></li>
+						<li class="text-white">Thursday: <strong>7am – 7pm</strong></li>
+						<li class="text-white">Friday: <strong>7am – 5pm</strong></li>
+						<li class="text-white">Saturday: <strong>9am – 5pm</strong></li>
+						<li class="text-white">Sunday: <strong>9am – 3pm</strong></li>
+					</ul>
+				</div>
+
+			</div><!-- row ends -->
+
+		</div><!-- container ends -->
 	</footer>
 
 </body>

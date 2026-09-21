@@ -1,16 +1,23 @@
 /* GLOBAL STYLES */
-html { box-sizing:border-box;}
-*,*:before, *:after {box-sizing: inherit; }
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
 
-body { font-family: "Space Grotesk", sans-serif; background-color:#FFF4E2} 
+body { 
+    font-family: "Space Grotesk", sans-serif;
+    color: #53444B;
+    background-color: #FFF4E2;
+} 
 
-header { background-color: #873A47;
-    padding:16px 6%;}
+header { 
+    background-color: #873A47;
+    padding: 16px 6%;
+}
 
 /* BACKGROUND */
-.background-gold{background-color: #D2A751;}
-.background-maroon-light{background-color: #873A47;}
-.background-maroon-dark{background-color: #4A0E30;}
+.background-gold        { background-color: #D2A751; }
+.background-maroon-light{ background-color: #873A47; }
+.background-maroon-dark { background-color: #4A0E30; }
+.text-white { color: white; }
 
 /* FONTS */
 h1{
@@ -60,12 +67,12 @@ nav, li { list-style:none; padding-left:0; } /* this is targeting the list items
 nav ul {
     display:flex;
     justify-content: center;
-    gap:16px;
+    gap: 16px;
 }
 .nav-link { color:#ffffff; text-decoration: none; }
 
 .paragraph-large { 
-    font-size:40px;
+    font-size: 40px;
     line-height: 120%;
     font-weight: 700;
     letter-spacing: -1px;
@@ -81,10 +88,6 @@ nav ul {
     height: 42px;
     width: 94px;
     color:#FFFFFF;
-}
-
-.background-maroon-light h2 {
-    color:white
 }
 
 .maroon-button {
@@ -103,7 +106,6 @@ footer {
     
 }
 .footer h3, .footer p, .footer ul, .footer a{
-    color:#ffffff;
     text-decoration: none;
 }
 .footer p,.footer ul{
