@@ -29,31 +29,31 @@
 	<!-- HEADER: the strip along the top. It is the same on every page of the site,
 	     which is why it lives outside <main>. -->
 	<header>
-        <!-- LOGO -->
-        <div class="row row-justify-center row-align-center">
-            <div class="col col-lg-1">
-                <a href="index.html"><img src="images/rise-logo.svg" style="width:120px;"></a>
-            </div>
+		<!-- LOGO -->
+		<div class="row row-justify-center row-align-center">
+			<div class="col col-lg-2">
+				<a href="index.html"><img src="images/rise-logo.svg" style="width:120px;"></a>
+			</div>
 
-            <!-- NAVIGATION: a menu is a LIST of related links, so it is marked up as a ul with li inside.
+			<!-- NAVIGATION: a menu is a LIST of related links, so it is marked up as a ul with li inside.
 		     CSS takes the bullets off later, but underneath it stays a list, because that is what it is. -->
-            <div class="col col-lg-12">
-                <nav>
-                    <ul>
-                        <li><a class="nav-link" href="index.html">Home</a></li>
-                        <li><a class="nav-link" href="about.html">About</a></li>
-                        <li><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+			<div class="col col-lg-8">
+				<nav>
+					<ul>
+						<li><a class="nav-link" href="index.html">Home</a></li>
+						<li><a class="nav-link" href="about.html">About</a></li>
+						<li><a class="nav-link" href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
 
-            <!-- The # in this href jumps to the element with id="visit" further down THIS page,
+			<!-- The # in this href jumps to the element with id="visit" further down THIS page,
 		     instead of opening a different page. -->
-            <div class="col col-lg-1">
-                <a class="visit-button" href="#visit">Visit Us</a>
-            </div>
-        </div>
-    </header>
+			<div class="col col-lg-2">
+				<a class="visit-button" href="#visit">Visit Us</a>
+			</div>
+		</div>
+	</header>
 
 	<!-- MAIN: everything between the header and the footer. This is the part that is
 	     actually THIS page. One <main> per page. -->
@@ -123,7 +123,7 @@
 				</div><!-- row ends -->
 
 				<!-- ROW -->
-				<div class="row">
+				<div class="row row-align-center">
 
 					<!-- COLUMN 1 -->
 					<div class="col col-lg-4">
@@ -188,8 +188,9 @@
 							<li>Saturday: <strong>9am – 5pm</strong></li>
 							<li>Sunday: 9am – 3pm</li>
 						</ul>
-
-						<a href="#vistit" class="maroon-button">Get in Touch</a>
+						<div class="button-margin">
+							<a href="#vistit" class="maroon-button">Get in Touch</a>
+						</div>
 					</div>
 
 					<!-- COLUMN 2: the map -->
