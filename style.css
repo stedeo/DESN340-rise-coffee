@@ -189,10 +189,31 @@ footer {
     height: 600px;
     z-index: 0;
 }
+.overflow-hidden{
+    overflow:hidden;
+}
+
+.hero-img2 {
+    position:relative;
+    background-image: url(images/rise-coffee-2.jpg);
+    background-position-y: -600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 580px;
+    z-index: 0;
+}
 .hero-icon{
     position:absolute;
     width: 20%;
     top: -25%;
     right: -10%;
     transform: rotate(-2deg);
+}
+
+.hero-icon2{
+    position:absolute;
+    width: 35%;
+    bottom: -45%;
+    left: -15%;
+    transform: rotate(4deg);
 }
