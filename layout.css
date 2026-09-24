@@ -1,28 +1,44 @@
 /* CONTAINER */
 .container {
-    display:block;
+    display: block;
     width: 88%;
-    max-width:1400px;
+    max-width: 1400px;
     margin: 0 auto;
 }
+
 .container-full {
-    display:block;
-    width:100%
+    display: block;
+    width: 100%;
+    overflow: hidden;
 }
 
 /* ROW */
 .row {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
-    align-items:stretch;
-    margin:0px -20px;
+    align-items: stretch;
+    margin: 0px -20px;
 }
-.row-justify-center { justify-content: center;}
-.row-justify-end { justify-content: flex-end;}
-.row-justify-between { justify-content: space-between;}
 
-.row-align-end { align-items: flex-end;}
-.row-align-center { align-items: center;}
+.row-justify-center {
+    justify-content: center;
+}
+
+.row-justify-end {
+    justify-content: flex-end;
+}
+
+.row-justify-between {
+    justify-content: space-between;
+}
+
+.row-align-end {
+    align-items: flex-end;
+}
+
+.row-align-center {
+    align-items: center;
+}
 
 /* COLUMN */
 .col {
@@ -31,25 +47,73 @@
     flex-basis: 0%;
     padding: 0px 20px;
 }
-.col-lg-1{max-width: 8.33%;}
-.col-lg-2{max-width: 16.67%;}
-.col-lg-3{max-width: 25%;}
-.col-lg-4{max-width: 33.33%;}
-.col-lg-5{max-width: 41.67%;}
-.col-lg-6{max-width: 50%;}
-.col-lg-7{max-width: 58.33%;}
-.col-lg-8{max-width: 66.67%;}
-.col-lg-9{max-width: 75%;}
-.col-lg-10{max-width: 83.33%;}
-.col-lg-11{max-width: 91.67%;}
-.col-lg-12{max-width: 100%;}
+
+.col-lg-1 {
+    max-width: 8.33%;
+}
+
+.col-lg-2 {
+    max-width: 16.67%;
+}
+
+.col-lg-3 {
+    max-width: 25%;
+}
+
+.col-lg-4 {
+    max-width: 33.33%;
+}
+
+.col-lg-5 {
+    max-width: 41.67%;
+}
+
+.col-lg-6 {
+    max-width: 50%;
+}
+
+.col-lg-7 {
+    max-width: 58.33%;
+}
+
+.col-lg-8 {
+    max-width: 66.67%;
+}
+
+.col-lg-9 {
+    max-width: 75%;
+}
+
+.col-lg-10 {
+    max-width: 83.33%;
+}
+
+.col-lg-11 {
+    max-width: 91.67%;
+}
+
+.col-lg-12 {
+    max-width: 100%;
+}
 
 /* UTILITIES */
-.section-padding{padding:84px 0px;}
-.text-center{text-align: center;}
-.text-right{text-align: right;}
-.img-full{display:block; width:100%}
+.section-padding {
+    padding: 84px 0px;
+}
 
-.button-margin{
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.img-full {
+    display: block;
+    width: 100%
+}
+
+.button-margin {
     margin-top: 24px;
 }
