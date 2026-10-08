@@ -159,8 +159,22 @@ footer {
 .horizontal-line {
     width: 100%;
     height: 4px;
-    margin-top: 24px;
     background-color: #D2A751;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 24px;
+    flex-grow: 1;
+}
+
+.card-border {
+    border-top: solid 4px #D2A751;
+    border-bottom: solid 4px #D2A751;
+    margin: 24px 0;
+    flex-grow: 1;
 }
 
  /* IMAGES*/
