@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head><!-- The head is a container for information ABOUT the page.
+           Nothing in here appears on the page. The browser reads it, the visitor never sees it. -->
+
+	<!-- Which character set to use. Leave this out and apostrophes turn into garbage. -->
+	<meta charset="utf-8">
+	<!-- Tells a phone to use its real width instead of pretending to be a desktop. -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The browser tab text, and what Google shows in search results. Not a heading on the page. -->
+	<title>Contact | Rise Coffee</title>
+
+	<!-- STYLES: normalize first, then layout, then style.
+	     General to specific. When two rules clash, the later one wins. -->
+	<link rel="stylesheet" href="normalize.css"> <!-- Irons out browser default settings. -->
+	<link rel="stylesheet" href="layout.css"> <!-- This controls our structure and layout. -->
+	<link rel="stylesheet" href="style.css"> <!-- This is where we style the elements of the page. -->
+
+	<!-- FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body><!-- The body holds everything the visitor actually SEES. -->
+
+	<!-- HEADER: the strip along the top. It is the same on every page of the site,
+	     which is why it lives outside <main>. -->
+	<header>
+		<!-- LOGO -->
+		<div class="row row-justify-center row-align-center">
+			<div class="col col-lg-2">
+				<a href="index.html"><img src="images/rise-logo.svg" style="width:120px;"></a>
+			</div>
+
+			<!-- NAVIGATION: a menu is a LIST of related links, so it is marked up as a ul with li inside.
+		     CSS takes the bullets off later, but underneath it stays a list, because that is what it is. -->
+			<div class="col col-lg-8">
+				<nav>
+					<ul>
+						<li><a class="nav-link" href="index.html">Home</a></li>
+						<li><a class="nav-link" href="about.html">About</a></li>
+						<li><a class="nav-link" href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<!-- The # in this href jumps to the element with id="visit" further down THIS page,
+		     instead of opening a different page. -->
+			<div class="col col-lg-2">
+				<a class="visit-button" href="#visit">Visit Us</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- MAIN: everything between the header and the footer. This is the part that is
+	     actually THIS page. One <main> per page. -->
+	<main>
+		<section class="section-padding">
+			<div class="container">
+				<div class="col col-lg-12 text-center">
+					<h1>contact us</h1>
+				</div>
+				<div class="row row-justify-center">
+					<div class=" col col-lg-4">
+						<h3>location</h3>
+						<p>304 Main St</p>
+						<p>Wellington, ON K0K 3L0</p>
+						<h3>hours</h3>
+						<ul class="hours">
+							<li>Monday: <strong>7am – 5pm</strong></li>
+							<li>Tuesday: <strong>7am – 5pm</strong></li>
+							<li>Wednesday: <strong>7am – 5pm</strong></li>
+							<li>Thursday: <strong>7am – 7pm</strong></li>
+							<li>Friday: <strong>7am – 5pm</strong></li>
+							<li>Saturday: <strong>9am – 5pm</strong></li>
+							<li>Sunday: <strong>9am – 3pm</strong></li>
+						</ul>
+					</div>
+					<div class="col col-lg-8">
+
+						<h3 class="text-left">have a question?</h3>
+						<form class="contact-form">
+							<div class="field field-left">
+								<label for="FirstName">First Name</label>
+								<input type="text" id="FirstName" class="input-text">
+							</div>
+							<div class="field field-right">
+								<label for="LastName">Last Name</label>
+								<input type="text" id="LastName" class="input-text">
+							</div>
+							<div class="field field-left">
+								<label for="Email">Email</label>
+								<input type="text" id="Email" class="input-text">
+							</div>
+							<div class="field field-right">
+								<label for="Phone">Phone</label>
+								<input type="text" id="Phone" class="input-text">
+							</div>
+							<div class="field field-wide">
+								<label for="Message">Message</label>
+								<textarea id="Message" class="input-message"></textarea>
+							</div>
+							<input type="submit" value="Send" class="maroon-button form-submit">
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- MAP -->
+		<section>
+			<div class="container-full">
+				<img src="images/map.png">
+			</div>
+		</section>
+
+		<!-- TESTIMONIALS SECTION: maroon band in the mockup.
+		     text-white goes on EACH element that needs it, not on the section.
+		     A colour inherited from a parent loses to a rule that targets the element directly, and h2 already has a colour of its own. -->
+		<section class="section-padding background-maroon-light">
+			<div class="container">
+
+				<!-- ROW -->
+				<div class="row row-justify-center">
+					<div class="col col-lg-8 text-center">
+						<!-- Decorative image, so alt is empty. A screen reader skips it. -->
+						<img src="images/rise-icon-2.svg" style="width: 100px" alt="">
+						<h2 class="text-white">what our regulars are saying...</h2>
+						<p class="text-white quote-text">“Friendly staff and amazing pastries. Highly recommend.”</p>
+						<p class="text-white quote-author">— Leah T.</p>
+					</div>
+				</div><!-- row ends -->
+
+			</div><!-- container ends -->
+		</section>
+
+	</main>
+
+
+	<!-- FOOTER: three equal columns. Same shape as the known for section,
+	     4 + 4 + 4 = 12. The footer sits outside <main> because it repeats
+	     on every page, exactly like the header. -->
+	<footer class="section-padding background-maroon">
+		<div class="container">
+
+			<!-- ROW -->
+			<div class="row">
+
+				<!-- COLUMN 1 -->
+				<div class="col col-lg-4">
+					<a href="index.html"><img src="images/rise-logo.svg" style="width:120px;" alt="rise logo"></a>
+					<p class="text-white">© 2026 Rise Coffee</p>
+					<a href="#" class="nav-link">Privacy Policy</a>
+					<a href="#" class="nav-link">Terms</a>
+				</div>
+
+				<!-- COLUMN 2 -->
+				<div class="col col-lg-4">
+					<h2 class="text-white">Get in Touch</h2>
+					<p class="text-white">780-939-5224</p>
+					<p class="text-white">hello@risecoffee.com</p>
+					<p class="text-white">304 Main St<br>Wellington, ON K0K 3L0</p>
+				</div>
+
+				<!-- COLUMN 3 -->
+				<div class="col col-lg-4">
+					<h2 class="text-white">Hours</h2>
+					<ul>
+						<li class="text-white">Monday: <strong>7am – 5pm</strong></li>
+						<li class="text-white">Tuesday: <strong>7am – 5pm</strong></li>
+						<li class="text-white">Wednesday: <strong>7am – 5pm</strong></li>
+						<li class="text-white">Thursday: <strong>7am – 7pm</strong></li>
+						<li class="text-white">Friday: <strong>7am – 5pm</strong></li>
+						<li class="text-white">Saturday: <strong>9am – 5pm</strong></li>
+						<li class="text-white">Sunday: <strong>9am – 3pm</strong></li>
+					</ul>
+				</div>
+
+			</div><!-- row ends -->
+
+		</div><!-- container ends -->
+	</footer>
+
+</body>
+
+</html>
