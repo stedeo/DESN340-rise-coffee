@@ -136,6 +136,7 @@ nav ul {
     font-weight: 700;
     padding: 10px 18px;
     color: #FFFFFF;
+    white-space: nowrap;
 }
 
 .visit-button:hover {
@@ -276,7 +277,8 @@ footer {
 .input-text {
     min-height: 32px;
 }
-.input-message{
+
+.input-message {
     min-height: 100px;
 }
 
@@ -289,10 +291,60 @@ footer {
     justify-self: start;
     border: none;
 }
+
 textarea {
-    resize:none;
+    resize: none;
 }
 
-.logo {
-    width:120px;
+/* Tablet*/
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    h1 {
+        font-size: 56px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    .paragraph-large {
+        font-size: 30px;
+    }
+
+    .section-padding {
+        padding: 56px 0px;
+    }
+
 }
+
+/* MOBILE   0 to 480 */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .paragraph-large {
+        font-size: 24px;
+    }
+
+    .section-padding {
+        padding: 40px 0px;
+    }
+}
+
+/* DESKTOP */
+@media screen and (max-width: 1440px) and (min-width: 1280px) {}
+
+/* EXTRA-LARGE */
+@media screen and (min-width: 1441px) {}
