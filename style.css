@@ -17,7 +17,14 @@ body {
 
 header {
     background-color: #873A47;
-    padding: 16px 6%;
+    padding: 24px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 168px;
 }
 
 /* BACKGROUND */
@@ -87,13 +94,18 @@ p {
 }
 
 /* NAVIGATION */
-nav,
-li {
+nav li {
     list-style: none;
     padding-left: 0;
 }
 
-.hamburger { 
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.hamburger {
     display: none;
     width: 32px;
     height: 24px;
@@ -341,6 +353,32 @@ textarea {
     .section-padding {
         padding: 40px 0px;
     }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav-visit {
+        display: none;
+    }
+
+    .nav-link {
+        display: none;
+    }
+
+    header {
+        padding: 16px 6%;
+    }
+
+    .logo {
+        width: 104px;
+    }
+
+
 }
 
 /* DESKTOP */
