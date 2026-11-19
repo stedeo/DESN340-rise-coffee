@@ -20,6 +20,9 @@ header {
     padding: 24px 6%;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .logo {
@@ -425,9 +428,10 @@ textarea {
     .form-submit {
         grid-column: 1 / 2;
     }
+
     .hero-img2 {
-    height: 240px;
-}
+        height: 240px;
+    }
 
 }
 
